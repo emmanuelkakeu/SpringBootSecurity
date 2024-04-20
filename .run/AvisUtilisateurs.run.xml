@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="AvisUtilisateurs" type="Application" factoryName="Application" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+    <option name="MAIN_CLASS_NAME" value="chilo.tech.avis.AvisUtilisateurs" />
+    <module name="avis-utilisateur" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../Program Files/personnel/securityApp" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

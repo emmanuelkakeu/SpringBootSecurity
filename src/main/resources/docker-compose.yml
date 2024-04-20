@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: postgres-16.2-alpine3.19
+    image: postgres:16.2-alpine3.19
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_DB: avis-utilisateur
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: kakeu33
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  adminer:
+    container_name: adminer-4.8.0-standalone
+    image: adminer:4.8.0-standalone
+    restart: always
+    ports:
+      - 9080:8080
+
+  smtp4dev:
+    container_name: smtp4dev
+    image: rnwood/smtp4dev:v3
+    restart: always
+    ports:
+      - 9081:80  # Port pour l'interface web
+      - 9085:25  # Port pour le serveur SMTP
+
+volumes:
+  postgres_data:
